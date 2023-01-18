@@ -94,3 +94,38 @@ To see it live tap this command in terminal:
 ```
 npm start
 ```
+
+In the App.js import necessary hooks and functions and create buttons:
+
+```
+import { useSelector, useDispatch } from "react-redux";
+import { decrement, increment } from "./redux/counter";
+
+function App() {
+  const { count } = useSelector((state) => state.counter);
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <p>Score: {count}</p>
+      <button onClick={() => dispatch(increment())}>+</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Let's add some more buttons. \
+We need to import incrementByAmount from redux/counter
+
+```
+import { decrement, increment, incrementByAmount } from "./redux/counter";
+```
+And create a new button that will increase our value by 5
+
+``` 
+<button onClick={() => dispatch(incrementByAmount(5))}>+5</button>
+```
+
