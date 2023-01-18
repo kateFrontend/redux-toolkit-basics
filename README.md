@@ -12,7 +12,7 @@ npm install react react-redux
 npm install @reduxjs/toolkit 
 ```
 
-## 🦉 Terminology
+## 🦉 Create a simple counter app
 
 Let's start learning Redux Toolkit by creating a simple mini Redux counter app.\
 We need to follow a few steps:
@@ -118,14 +118,36 @@ export default App;
 ```
 
 Let's add some more buttons. \
-We need to import incrementByAmount from redux/counter
+We need to import incrementByAmount from redux/counter.
 
 ```
 import { decrement, increment, incrementByAmount } from "./redux/counter";
 ```
-And create a new button that will increase our value by 5
+And create a new button that will increase our value by 5.
 
 ``` 
 <button onClick={() => dispatch(incrementByAmount(5))}>+5</button>
 ```
+
+Ok. Now let's add a new button that will decrement our value by 5.
+
+First we need to create a new reducer in the counter.js and export it:
+
+```
+decrementByAmount: (state, action) => {
+    state.count -= action.payload
+    },
+
+export const { increment, decrement, incrementByAmount, decrementByAmount } = counterSlice.actions
+
+```
+Now we need to import it in App.js and create a new button: 
+
+```
+<button onClick={() => dispatch(decrementByAmount(5))}>-5</button>
+```
+
+And what we need to do if we need one more button that multiply our value by 5?
+
+Right! We need to make the same steps as before. Take a look in the counter.js and App.js files.
 
