@@ -86,3 +86,11 @@ export const { increment, decrement, incrementByAmount } = counterSlice.actions
 
 export default counterSlice.reducer
 ```
+- ### Display app
+  
+Let's display our app in App.js. \
+To see it live tap this command in terminal:
+
+```
+npm start
+```
