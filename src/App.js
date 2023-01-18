@@ -6,7 +6,7 @@ import {
   decrementByAmount,
   multiplyByAmount,
 } from "./redux/counter";
-
+import "./App.css";
 // useSelector - it's a hook that allows us to read our state
 // useDispatch - a hook that allows us to change our state
 
@@ -15,13 +15,18 @@ function App() {
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <p>Score: {count}</p>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
-      <button onClick={() => dispatch(incrementByAmount(5))}>+5</button>
-      <button onClick={() => dispatch(decrementByAmount(5))}>-5</button>
-      <button onClick={() => dispatch(multiplyByAmount(5))}>*5</button>
+    <div className="container">
+      <header className="header">
+        <h1>Redux Toolkit Counter App</h1>
+      </header>
+      <h2>Score: {count}</h2>
+      <div className="box">
+        <button className="btn" onClick={() => dispatch(increment())}>+</button>
+        <button className="btn" onClick={() => dispatch(decrement())}>-</button>
+        <button className="btn" onClick={() => dispatch(incrementByAmount(5))}>+5</button>
+        <button className="btn" onClick={() => dispatch(decrementByAmount(5))}>-5</button>
+        <button className="btn" onClick={() => dispatch(multiplyByAmount(5))}>*5</button>
+      </div>
     </div>
   );
 }
