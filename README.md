@@ -1,5 +1,7 @@
 #  ![My Skills](https://skillicons.dev/icons?i=redux)  Redux Toolkit Basics
 
+![](.../../src/assets/toolkit.gif)
+
 The **Redux Toolkit** package is intended to be the standard way to write Redux logic.
 It can help you make your Redux code better.
 
@@ -151,6 +153,4 @@ And what we need to do if we need one more button that multiply our value by 5?
 
 Right! We need to make the same steps as before. Take a look in the counter.js and App.js files.
 
-Let's add some Css to make it look nice and here is our result
 
-![](.../../src/assets/toolkit.gif)

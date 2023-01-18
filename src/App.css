@@ -45,3 +45,28 @@ h2 {
 .btn:hover {
   background-color:rgb(183, 114, 247);
 }
+
+@media all and (max-width: 500px) {
+  .container{
+    width: 300px;
+  }
+
+  .header {
+    margin-top: 5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .box {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 10rem;
+    margin: 0.5rem 0;
+  }
+}
